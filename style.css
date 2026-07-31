@@ -7,14 +7,14 @@
 }
 
 :root {
-  --bg: #f4f1ea;
+  --bg: #f5efe6;
   --surface: #ffffff;
-  --text: #1f2933;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
-  --border: #e5e7eb;
-  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --text: #3d2e1f;
+  --muted: #7a6652;
+  --accent: #8b5a2b;
+  --accent-soft: #ede4d4;
+  --border: #ddd0bc;
+  --shadow: 0 10px 30px rgba(61, 46, 31, 0.1);
 }
 
 body {
@@ -25,12 +25,52 @@ body {
 }
 
 .header {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
-  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 50%, rgba(139, 90, 43, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(160, 120, 70, 0.15) 0%, transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(180, 140, 90, 0.1) 0%, transparent 45%),
+    linear-gradient(135deg, #ede4d4 0%, #dcc9ad 45%, #c9b08a 100%);
+  color: #4a3728;
   padding: 2rem 1.5rem;
+  border-bottom: 1px solid #c4a882;
 }
 
+.header-chestnuts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chestnut {
+  position: absolute;
+  line-height: 1;
+  opacity: 0.35;
+  user-select: none;
+}
+
+.chestnut:nth-child(1)  { top: 8%;  left: 3%;   font-size: 1.4rem; transform: rotate(-18deg); }
+.chestnut:nth-child(2)  { top: 15%; left: 12%;  font-size: 1.8rem; transform: rotate(12deg); opacity: 0.28; }
+.chestnut:nth-child(3)  { top: 5%;  left: 22%;  font-size: 1.2rem; transform: rotate(25deg); }
+.chestnut:nth-child(4)  { top: 55%; left: 8%;   font-size: 1.6rem; transform: rotate(-8deg); opacity: 0.3; }
+.chestnut:nth-child(5)  { top: 70%; left: 18%;  font-size: 1.3rem; transform: rotate(30deg); }
+.chestnut:nth-child(6)  { top: 25%; left: 35%;  font-size: 1.1rem; transform: rotate(-22deg); opacity: 0.22; }
+.chestnut:nth-child(7)  { top: 60%; left: 42%;  font-size: 1.5rem; transform: rotate(15deg); opacity: 0.25; }
+.chestnut:nth-child(8)  { top: 10%; left: 48%;  font-size: 1.7rem; transform: rotate(-12deg); }
+.chestnut:nth-child(9)  { top: 75%; left: 55%;  font-size: 1.2rem; transform: rotate(20deg); opacity: 0.3; }
+.chestnut:nth-child(10) { top: 20%; left: 62%;  font-size: 1.4rem; transform: rotate(-28deg); opacity: 0.28; }
+.chestnut:nth-child(11) { top: 50%; left: 72%;  font-size: 1.9rem; transform: rotate(8deg); opacity: 0.32; }
+.chestnut:nth-child(12) { top: 8%;  left: 78%;  font-size: 1.3rem; transform: rotate(-15deg); }
+.chestnut:nth-child(13) { top: 65%; left: 85%;  font-size: 1.6rem; transform: rotate(22deg); opacity: 0.27; }
+.chestnut:nth-child(14) { top: 30%; left: 90%;  font-size: 1.1rem; transform: rotate(-5deg); opacity: 0.24; }
+.chestnut:nth-child(15) { top: 78%; left: 92%;  font-size: 1.5rem; transform: rotate(18deg); opacity: 0.3; }
+.chestnut:nth-child(16) { top: 40%; left: 95%;  font-size: 1.2rem; transform: rotate(-20deg); opacity: 0.26; }
+
 .header-inner {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -39,7 +79,7 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.85;
+  color: #8b6914;
   margin-bottom: 0.5rem;
 }
 
@@ -51,7 +91,7 @@ body {
 
 .header-desc {
   line-height: 1.7;
-  opacity: 0.92;
+  color: #5c4835;
   max-width: 560px;
 }
 
