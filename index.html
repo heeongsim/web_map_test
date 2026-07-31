@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나를 소개하는 웹 지도</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <p class="header-label">My Place Map</p>
+      <h1>나를 소개하는 웹 지도</h1>
+      <p class="header-desc">
+        공주에서의 배움, 추억, 그리고 맛있는 순간들.<br>
+        지도 위 마커를 클릭하면 각 장소의 이야기를 볼 수 있어요.
+      </p>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <h2>장소 목록</h2>
+      <ul id="place-list" class="place-list"></ul>
+    </aside>
+    <div id="map" class="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
